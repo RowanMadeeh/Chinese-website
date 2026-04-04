@@ -8,26 +8,30 @@ const festivals = [
   {
     name: "斋月",
     icon: Moon,
-    desc: "伊斯兰教最重要的月份，穆斯林从黎明到日落禁食。每晚在清真寺进行特别的泰拉威赫祈祷。",
-    details: "斋月是伊斯兰历的第九个月，是穆斯林最重要的宗教月份。从黎明到日落期间禁食、禁饮。每天日落后的开斋饭（伊夫塔尔）是家庭和社区聚会的重要时刻。特色美食包括：椰枣（传统先食用）、三角饺（Sambousek）、卡塔伊夫甜饼、干果饮品（卡马尔丁）和甘草汁。开罗的街道在斋月期间会挂满彩色灯笼（法努斯），气氛温馨而热闹。清真寺每晚举行特别的泰拉威赫祈祷。",
+    desc: "伊斯兰教最重要的斋戒月份，从黎明到日落禁食禁饮。",
+    details:
+      "斋月是伊斯兰教中最重要的月份，穆斯林在整个斋月期间从黎明到日落禁食禁饮。除了斋戒，还包括多种宗教和社会习俗，例如：每晚在清真寺进行塔拉威哈祈祷、诵读《古兰经》以及施舍天课和慈善。特色食物包括：用椰枣和牛奶开始开斋、萨姆布萨克、卡塔耶夫、胡沙夫（浸泡的干果）、以及甘草汁和罗望子汁等饮品。",
   },
   {
     name: "开斋节",
     icon: Sun,
-    desc: "斋月结束后的庆祝节日。人们穿新衣、走亲访友、参加节日祈祷。",
-    details: "开斋节是斋月结束后的重要庆祝节日，为期三天。清晨人们穿上新衣前往清真寺参加节日祈祷，之后走亲访友、互赠礼物。孩子们收到节日红包（伊迪亚）。特色甜点是开斋节饼干（Kahk），这是一种黄油酥饼，内馅有枣泥、坚果或土耳其软糖，表面撒糖粉。每个家庭都会提前几天开始制作大量饼干，也会分送给邻居和朋友。",
+    desc: "斋月结束后的重要节日，以礼拜、探亲和穿新衣为特色。",
+    details:
+      "开斋节是在斋月结束后庆祝的重要节日。人们会参加节日礼拜、探亲访友，并穿上新衣服庆祝。特色食物包括节日饼干（夹坚果或椰枣）、格里巴饼干以及各种甜点类食品。",
   },
   {
     name: "宰牲节",
     icon: Heart,
-    desc: "以宰牲为标志的重要节日，将肉分送给穷人。",
-    details: "宰牲节是伊斯兰教最重要的节日之一，纪念先知易卜拉欣的虔诚信仰。节日期间，家庭会宰杀一只羊或牛，将肉分为三份：一份留给家人，一份送给亲友，一份施舍给穷人。特色美食包括烤羊肉、肉丸（Kofta）、烤串（Kebab）和法塔（Fatta，一种由米饭、面包和肉汤层叠而成的菜肴）。节日持续四天，是家庭团聚的重要时刻。",
+    desc: "通过宰牲并分享肉类来体现奉献与慈善的重要节日。",
+    details:
+      "宰牲节的主要特点是宰杀祭牲（如羊或牛），并将肉分发给亲属和贫困者，体现分享与慈善精神。特色食物包括法塔（米饭、面包与肉的传统菜）、烤肉串、烤肉饼以及各种烤肉料理。",
   },
   {
-    name: "春祭节",
+    name: "闻香节（春季节日）",
     icon: Flower2,
-    desc: "所有埃及人共同庆祝的法老时期春天节日。",
-    details: "春祭节（沙姆·恩·纳西姆）是埃及最古老的节日之一，可追溯到4500年前的法老时代，庆祝春天的到来。每年在科普特复活节后的第二天庆祝，是全体埃及人（无论信仰）共同参与的节日。人们外出踏青、野餐，品尝传统美食：腌鱼（Fesikh，经过特殊发酵的灰鲻鱼）、烟熏鲱鱼（Renga）、绿洋葱和彩色鸡蛋。彩蛋象征着新生命和丰收。",
+    desc: "源自古埃及的春季节日，全国人民共同庆祝。",
+    details:
+      "一个源自古埃及的节日，所有埃及人都会庆祝。，习俗：外出到尼罗河附近的花园和公园游玩。，特色食物：菲西赫和熏鲱鱼（咸鱼）。彩色鸡蛋（象征生命）。",
   },
 ];
 
@@ -35,7 +39,7 @@ export default function FestivalsSection() {
   const [selectedFestival, setSelectedFestival] = useState<typeof festivals[0] | null>(null);
 
   return (
-    <section className="section-padding bg-background">
+    <section id="festivals" className="section-padding bg-background">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -43,9 +47,9 @@ export default function FestivalsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-gradient-gold mb-4">传统文化与节日</h2>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold text-gradient-gold mb-4">埃及的节日与庆典</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            了解埃及丰富的传统节日和独特的文化习俗
+            埃及人的日历中充满了各种节日，每一个节日都与特定的食物和传统习俗相关.
           </p>
         </motion.div>
 
