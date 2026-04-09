@@ -28,7 +28,6 @@ const App = () => (
         <EntertainmentSection />
         <FoodSection />
         <FestivalsSection />
-        <Footer />
       </div>
     </TooltipProvider>
   </QueryClientProvider>
