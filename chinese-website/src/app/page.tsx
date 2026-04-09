@@ -11,7 +11,6 @@ import CultureSection from "@/app/components/CultureSection";
 import EntertainmentSection from "@/app/components/EntertainmentSection";
 import FoodSection from "@/app/components/FoodSection";
 import FestivalsSection from "@/app/components/FestivalsSection";
-import Footer from "@/app/components/Footer";
 
 const queryClient = new QueryClient();
 
